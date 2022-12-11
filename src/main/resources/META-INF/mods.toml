@@ -31,10 +31,10 @@ displayName="Theonetest" #mandatory
 # A text field displayed in the mod UI
 #credits="Thanks for this example mod goes to Java" #optional
 # A text field displayed in the mod UI
-authors="milog" #optional
+authors=["milog","MokkaHornisse48"] #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-
+   Bang Mod zum bangen
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.theonetest]] #optional

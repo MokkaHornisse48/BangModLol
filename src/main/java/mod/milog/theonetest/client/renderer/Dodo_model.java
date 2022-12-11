@@ -158,11 +158,13 @@ public class Dodo_model<D extends DodoEntity> extends EntityModel<DodoEntity> {
 		this.rightleg.rotateAngleZ = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 		this.leftleg.rotateAngleZ = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 
-		float f = MathHelper.lerp(ageInTicks, entityIn.oFlap, entityIn.wingRotation);
-		float f1 = MathHelper.lerp(ageInTicks, entityIn.oFlapSpeed, entityIn.destPos);
+		float f = MathHelper.lerp(ageInTicks/2, entityIn.oFlap, entityIn.wingRotation);
+		float f1 = MathHelper.lerp(ageInTicks/2, entityIn.oFlapSpeed, entityIn.destPos);
 		float f2 =  (MathHelper.sin(f) + 1.0F) * f1;
 
 		this.Head.rotateAngleZ = 0;
+		this.rightwing.rotateAngleZ = 0;
+		this.leftwing.rotateAngleZ = 0;
 		this.rightwing.rotateAngleX = f2;
 		this.leftwing.rotateAngleX = -f2;
 
@@ -232,7 +234,7 @@ public class Dodo_model<D extends DodoEntity> extends EntityModel<DodoEntity> {
 			red = afloat1[0] * (1.0F - f3) + afloat2[0] * f3;
 			green = afloat1[1] * (1.0F - f3) + afloat2[1] * f3;
 			blue = afloat1[2] * (1.0F - f3) + afloat2[2] * f3;
-			packedLightIn = 250;
+			//packedLightIn = 1000000;
 		}
 		this.render(matrixStackIn,bufferIn,packedLightIn,packedOverlayIn,red,green,blue,alpha);
 	}

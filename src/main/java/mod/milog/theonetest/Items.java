@@ -1,6 +1,7 @@
 package mod.milog.theonetest;
 
 import mod.milog.theonetest.entitys.Entitys;
+import mod.milog.theonetest.items.DodoEggItem;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
 import net.minecraft.util.registry.Registry;
@@ -38,4 +39,6 @@ public class Items {
             return Entitys.DodoEntity;
         }
     }, 0xb8bdbe, 0xcc9104, new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"dodo_spawn_egg");
+
+    public static final Item DODO_EGG = new DodoEggItem( new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"dodo_egg");
 }

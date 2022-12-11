@@ -16,7 +16,7 @@ public final class ModEventSubscriber {
     @SubscribeEvent
     public static void onRegisterItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-            new Item[]{Items.SEA_SALT_STUFF,Items.KATANA,Items.BLOOD_STONE,Items.LASER,Items.LASER_GUN,Items.PORTAL_GUN_1,Items.PORTAL_GUN_2,Items.BLOOD_ORE,Items.FIRE_DRAGON_STAFF,Items.DODO_SPAWN_EGG}
+            new Item[]{Items.SEA_SALT_STUFF,Items.KATANA,Items.BLOOD_STONE,Items.LASER,Items.LASER_GUN,Items.PORTAL_GUN_1,Items.PORTAL_GUN_2,Items.BLOOD_ORE,Items.FIRE_DRAGON_STAFF,Items.DODO_SPAWN_EGG,Items.DODO_EGG}
         );
 
     }
@@ -31,7 +31,7 @@ public final class ModEventSubscriber {
 
     @SubscribeEvent
     public static void onRegisterEntity(RegistryEvent.Register<EntityType<?>> event) {
-        event.getRegistry().registerAll(new EntityType[]{Entitys.DodoEntity});
+        event.getRegistry().registerAll(new EntityType[]{Entitys.DodoEntity,Entitys.DodoEggEntity});
     }
 
     @SubscribeEvent

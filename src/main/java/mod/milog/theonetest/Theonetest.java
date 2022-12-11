@@ -2,11 +2,17 @@ package mod.milog.theonetest;
 
 import mod.milog.theonetest.client.renderer.Dodo_renderer;
 import mod.milog.theonetest.entitys.Entitys;
+import mod.milog.theonetest.entitys.projectiles.DodoEggEntity;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererManager;
+import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -47,7 +53,8 @@ public class Theonetest {
     private void setup(final FMLCommonSetupEvent event) {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        //LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        LOGGER.info("MokkaHornisse48 = Gott");
     }
 
 
@@ -56,6 +63,7 @@ public class Theonetest {
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
         RenderTypeLookup.setRenderLayer(mod.milog.theonetest.Blocks.BLOOD_ORE, RenderType.getSolid());
         RenderingRegistry.registerEntityRenderingHandler(Entitys.DodoEntity, new Dodo_renderer.RenderFactory());
+        RenderingRegistry.registerEntityRenderingHandler(Entitys.DodoEggEntity, manager -> new SpriteRenderer<>(manager, Minecraft.getInstance().getItemRenderer()));
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

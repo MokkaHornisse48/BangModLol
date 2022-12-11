@@ -1,12 +1,12 @@
 package mod.milog.theonetest.entitys;
 
+import mod.milog.theonetest.Items;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.passive.ChickenEntity;
-import net.minecraft.item.Items;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
@@ -35,7 +35,7 @@ public class DodoEntity extends ChickenEntity {
         super.livingTick();
         if (!this.world.isRemote && this.isAlive() && !this.isChild() && !this.isChickenJockey() && --this.timeUntilNextEgg <= 0) {
             this.playSound(SoundEvents.ENTITY_CHICKEN_EGG, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-            this.entityDropItem(Items.EGG);
+            this.entityDropItem(Items.DODO_EGG.getDefaultInstance());
             this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
         }
 
