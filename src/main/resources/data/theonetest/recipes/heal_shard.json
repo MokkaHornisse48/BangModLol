@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "theonetest:sword_heal"
+    }
+  },
+  "result": {
+    "item": "theonetest:heal_shard",
+    "count": 2
+  }
+}
