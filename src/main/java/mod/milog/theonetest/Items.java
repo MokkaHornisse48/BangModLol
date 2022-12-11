@@ -1,13 +1,16 @@
 package mod.milog.theonetest;
 
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.SwordItem;
+import mod.milog.theonetest.entitys.Entitys;
+import mod.milog.theonetest.items.DodoEggItem;
+import net.minecraft.entity.EntityType;
+import net.minecraft.item.*;
+import net.minecraft.util.registry.Registry;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraft.item.ItemTier;
+
+import java.util.function.Supplier;
 
 public class Items {
 
@@ -28,6 +31,16 @@ public class Items {
         public static final Item BLOOD_ORE = new BlockItem(Blocks.BLOOD_ORE,new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"blood_ore");
 
     public static final Item FIRE_DRAGON_STAFF = new LaserGunItem(new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"fire_dragon_staff");
+
+
+    public static final Item DODO_SPAWN_EGG = new ForgeSpawnEggItem(new Supplier<EntityType<?>>() {
+        @Override
+        public EntityType<?> get() {
+            return Entitys.DodoEntity;
+        }
+    }, 0xb8bdbe, 0xcc9104, new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"dodo_spawn_egg");
+
+    public static final Item DODO_EGG = new DodoEggItem( new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"dodo_egg");
 
     public static final Item BLUE_BERRY = new Item(new Item.Properties().group(BangItemGroup.FOOD).food(new Food.Builder().hunger(1).saturation(2f).setAlwaysEdible().build())).setRegistryName(Theonetest.MOD_ID,"blue_berry");
 
@@ -89,7 +102,5 @@ public class Items {
     public static final Item SUN_SHARD = new Item(new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"sun_shard");
 
     public static final Item UNIVERSE_SHARD = new Item(new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"universe_shard");
-
-
 
 }
