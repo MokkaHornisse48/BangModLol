@@ -30,5 +30,6 @@
   "item.theonetest.strong_stone":  "Strong Stone",
   "item.theonetest.sun_stone":  "Sun Stone",
   "item.theonetest.universe_stone":  "Universe Stone",
-  "item.theonetest.sword_shadow": "Sword Shadow"
+  "item.theonetest.sword_shadow": "Sword Shadow",
+  "block.theonetest.shadow_block" : "Shadow Block"
 }
