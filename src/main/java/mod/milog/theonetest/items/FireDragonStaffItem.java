@@ -1,4 +1,4 @@
-package mod.milog.theonetest;
+package mod.milog.theonetest.items;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;

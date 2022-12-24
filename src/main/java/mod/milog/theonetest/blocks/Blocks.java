@@ -1,5 +1,6 @@
-package mod.milog.theonetest;
+package mod.milog.theonetest.blocks;
 
+import mod.milog.theonetest.Theonetest;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.AirBlock;
 import net.minecraft.block.Block;

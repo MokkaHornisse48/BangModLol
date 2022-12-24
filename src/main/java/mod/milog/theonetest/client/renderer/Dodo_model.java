@@ -3,22 +3,19 @@ package mod.milog.theonetest.client.renderer;// Made with Blockbench 4.4.3
 // Paste this class into your mod and generate all required imports
 
 
+import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import mod.milog.theonetest.entitys.DodoEntity;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.model.AgeableModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.item.DyeColor;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 
 //@OnlyIn(Dist.CLIENT)
-public class Dodo_model<D extends DodoEntity> extends EntityModel<DodoEntity> {
+public class Dodo_model<D extends DodoEntity> extends AgeableModel<DodoEntity> {
 	private final ModelRenderer bone;
 	private final ModelRenderer Tail;
 	private final ModelRenderer cube_r1;
@@ -35,6 +32,7 @@ public class Dodo_model<D extends DodoEntity> extends EntityModel<DodoEntity> {
 	private final ModelRenderer cube_r5;
 
 	public Dodo_model() {
+		//super(true, 0, 0, 2, 2, 0);
 		int textureWidth = 64;
 		int textureHeight = 64;
 
@@ -132,6 +130,7 @@ public class Dodo_model<D extends DodoEntity> extends EntityModel<DodoEntity> {
 		setRotationAngle(cube_r5, 0.0F, 0.0F, 0.0873F);
 		cube_r5.setTextureOffset(44, 41).addBox(7.0F, 0.0F, -1.0F, 2.0F, 1.0F, 4.0F, 0.0F, false);
 		cube_r5.setTextureOffset(32, 20).addBox(1.0F, -3.0F, -1.0F, 8.0F, 3.0F, 4.0F, 0.0F, false);
+
 	}
 
 	@Override
@@ -202,6 +201,7 @@ public class Dodo_model<D extends DodoEntity> extends EntityModel<DodoEntity> {
 		modelRenderer.rotateAngleZ = z;
 	}
 
+	/*
 	@Override
 	public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
 		/*
@@ -217,8 +217,18 @@ public class Dodo_model<D extends DodoEntity> extends EntityModel<DodoEntity> {
 			red = afloat1[0] * (1.0F - f3) + afloat2[0] * f3;
 			green = afloat1[1] * (1.0F - f3) + afloat2[1] * f3;
 			blue = afloat1[2] * (1.0F - f3) + afloat2[2] * f3;
-		}*/
+		}
 		bone.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+	}*/
+
+	@Override
+	protected Iterable<ModelRenderer> getHeadParts() {
+		return ImmutableList.of();
+	}
+
+	@Override
+	protected Iterable<ModelRenderer> getBodyParts() {
+		return ImmutableList.of(this.bone);
 	}
 
 	public void render(DodoEntity entityIn,MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha,float partialTicks) {

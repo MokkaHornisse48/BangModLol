@@ -1,14 +1,22 @@
-package mod.milog.theonetest;
+package mod.milog.theonetest.events;
 
+import mod.milog.theonetest.blocks.Blocks;
+import mod.milog.theonetest.items.Items;
+import mod.milog.theonetest.Theonetest;
 import mod.milog.theonetest.entitys.DodoEntity;
 import mod.milog.theonetest.entitys.Entitys;
+import mod.milog.theonetest.items.ability.AbilitySwordItem;
+import mod.milog.theonetest.networking.PacketHandler;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 @Mod.EventBusSubscriber(modid = Theonetest.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class ModEventSubscriber {
@@ -36,6 +44,13 @@ public final class ModEventSubscriber {
     public static void onEntityAttributeCreationEvent(EntityAttributeCreationEvent event) {
         event.put(Entitys.DodoEntity, DodoEntity.setAttributes().create());
     }
+
+    @SubscribeEvent
+    public static void onCommonSetupEvent(FMLCommonSetupEvent event) {
+        PacketHandler.register();
+    }
+
+
 
 }
 

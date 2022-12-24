@@ -1,10 +1,9 @@
 package mod.milog.theonetest;
 
+import mod.milog.theonetest.items.Items;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.function.Supplier;
 
 public enum Tools implements IItemTier {

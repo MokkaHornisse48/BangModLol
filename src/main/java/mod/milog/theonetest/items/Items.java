@@ -1,14 +1,15 @@
-package mod.milog.theonetest;
+package mod.milog.theonetest.items;
 
+import mod.milog.theonetest.Theonetest;
+import mod.milog.theonetest.blocks.Blocks;
 import mod.milog.theonetest.entitys.Entitys;
-import mod.milog.theonetest.items.DodoEggItem;
+import mod.milog.theonetest.items.ability.AbilitySwordItem;
+import mod.milog.theonetest.items.ability.DamageRepairAbility;
+import mod.milog.theonetest.items.ability.HealAbility;
+import mod.milog.theonetest.items.ability.SwordAbility;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
-import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.ForgeSpawnEggItem;
-import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
@@ -54,7 +55,7 @@ public class Items {
 
     public static final Item SWORD_UNIVERSE = new SwordItem(ItemTier.NETHERITE,50,-2.4F,new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"sword_universe");
 
-    public static final Item SWORD_HEAL = new SwordItem(ItemTier.NETHERITE,10,-2.4F,new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"sword_heal");
+    public static final Item SWORD_HEAL = new AbilitySwordItem(ItemTier.NETHERITE,10,-2.4F,new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP),new SwordAbility[]{new HealAbility(),new DamageRepairAbility()}).setRegistryName(Theonetest.MOD_ID,"sword_heal");
 
     public static final Item SWORD_AGILITY = new SwordItem(ItemTier.NETHERITE,20,-2.4F,new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"sword_agility");
 
