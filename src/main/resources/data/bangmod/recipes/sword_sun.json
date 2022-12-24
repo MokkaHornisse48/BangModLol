@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S"
+  ],
+  "key": {
+    "#": {
+      "item": "bangmod:sun_stone"
+    },
+    "S": {
+      "item": "bangmod:sword_base"
+    }
+  },
+  "result": {
+    "item": "bangmod:sword_sun",
+    "count": 1
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "bangmod:block/blood_ore_model" }
+    }
+}

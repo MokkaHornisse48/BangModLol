@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "bangmod:sword_strong"
+    }
+  },
+  "result": {
+    "item": "bangmod:strong_shard",
+    "count": 2
+  }
+}

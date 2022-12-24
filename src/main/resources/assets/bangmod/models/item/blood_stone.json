@@ -1,0 +1,9 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "bangmod:items/blood_stone"
+  },
+  "elements": [
+    {"shade":false}
+  ]
+}

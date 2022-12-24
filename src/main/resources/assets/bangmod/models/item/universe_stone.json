@@ -1,0 +1,51 @@
+{
+
+	"textures": {
+		"0": "bangmod:items/universe_stone",
+		"particle": "universe_stone"
+	},
+	"elements": [
+		{
+			"from": [0, 2, 0],
+			"to": [5, 7, 5],
+			"faces": {
+				"north": {"uv": [0, 0, 5, 5], "texture": "#0"},
+				"east": {"uv": [0, 5, 5, 10], "texture": "#0"},
+				"south": {"uv": [5, 0, 10, 5], "texture": "#0"},
+				"west": {"uv": [5, 5, 10, 10], "texture": "#0"},
+				"up": {"uv": [5, 15, 0, 10], "texture": "#0"},
+				"down": {"uv": [15, 0, 10, 5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [3, 2.5, 3.25],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [-2.5, 2.25, 2.75],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 44, 0],
+			"translation": [7.75, 7.25, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 25.75, 0],
+			"translation": [0, 5.25, 5.25]
+		},
+		"ground": {
+			"translation": [3.75, 1.75, 1.25],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [-180, 89, 180],
+			"translation": [6, 3.25, 0]
+		},
+		"fixed": {
+			"rotation": [180, -87.5, 180],
+			"translation": [-5.75, 3.75, 4.5]
+		}
+	}
+}

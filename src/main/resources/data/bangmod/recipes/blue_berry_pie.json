@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S",
+    " P"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:egg"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "P": {
+      "item": "bangmod:blue_berry"
+    }
+  },
+  "result": {
+    "item": "bangmod:blue_berry_pie",
+    "count": 1
+  }
+}
