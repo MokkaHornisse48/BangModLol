@@ -104,4 +104,6 @@ public class Items {
 
     public static final Item UNIVERSE_SHARD = new Item(new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"universe_shard");
 
+    public static final Item SHADOW_BLOCK = new BlockItem(Blocks.SHADOW_BLOCK,new Item.Properties().group(BangItemGroup.BANG_ITEM_GROUP)).setRegistryName(Theonetest.MOD_ID,"shadow_block");
+
 }

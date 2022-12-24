@@ -21,5 +21,8 @@ public class Blocks {
     public static final Block EXTRACTOR = new Block(AbstractBlock.Properties.create((Material.IRON),MaterialColor.BLACK)
             .hardnessAndResistance(3f,6).harvestTool(ToolType.PICKAXE).harvestLevel(2).sound(SoundType.METAL)).setRegistryName(Theonetest.MOD_ID,"extractor");
 
+    public static final Block SHADOW_BLOCK = new Block(AbstractBlock.Properties.create((Material.IRON),MaterialColor.BLACK)
+            .hardnessAndResistance(30f,60).harvestTool(ToolType.PICKAXE).harvestLevel(10).sound(SoundType.METAL)).setRegistryName(Theonetest.MOD_ID,"shadow_block");
+
 
 }
