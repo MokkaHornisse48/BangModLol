@@ -1,13 +1,14 @@
 {
   "required": true,
-  "package": "mod.milog.bangmod.mixins",
+  "package": "mod.bang.bangmod.mixins",
   "compatibilityLevel": "JAVA_8",
   "refmap": "mixins.bangmod.refmap.json",
   "mixins": [
   ],
   "client": [
+    "LivingRendererAccesor",
     "LivingRendererMixin",
-    "LivingRendererAccesor"
+    "MinecraftMixin"
   ],
   "minVersion": "0.8"
 }
